@@ -1,8 +1,10 @@
-export default function MoviesList(movies) {
+import MoviesItem from "./moviesItem"
+
+export default function MoviesList({Movies}) {
     return (
         <ul className="list">
-            {Movies.map((Movies) => (
-                <MoviesItem key={moviesItem.id} Movies={Movies}></MoviesItem>
+            {Movies.map((movie) => (
+                <MoviesItem key={movie.id} movies={movie}></MoviesItem>
             ))}
         </ul>
     )

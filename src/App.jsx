@@ -13,7 +13,7 @@ function createID(){
 return `${Date.now()}-${Math.random().toString(16).slice(2)}`
 }
 function App() {
-  const [Movies, setMovies] = useState([
+  const [movies, setMovies] = useState([
     // {id: createID(), title:"Drama", amount:"Watched", category:"Delete"},
   //  {id: createID(), title:"ٍEpic", amount:"unWatched", category:"Delete"},
   ])
@@ -40,15 +40,15 @@ function App() {
     <div className='page'>
       <header className='header'>
         <h1> Movie Watch List Manager </h1>
-        <h2> count: {count} </h2>
+        
       </header>
       <card title={"AddMovie"}>
-        <p> Form will be Here </p>
+     <MoviesForm onAddMovie={{handleAddMovie}}> </MoviesForm>
       </card>
 
       <card title={"Movies"}>
         <p> List will be Here </p>
-        <MoviesList Movies={Movies}></MoviesList>
+        <MoviesList Movies={movies}></MoviesList>
       </card>
 
       <div className="cardBody">

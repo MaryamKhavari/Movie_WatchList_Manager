@@ -29,11 +29,11 @@ export default function MoviesForm ({onAddMovie}){
                 <TextInput
                 label={"Title"}
                 value={title}
-                onchange={setTitle}
-                placeholder={"e.g.., Comedy"}
+                onChange={setTitle}
+                placeholder={"Action, Drama, Comedy e.g.."}
                 > </TextInput>
             </div>
-            (error ? <p className="error">{error}</p> : null)
+            {error ? <p className="error">{error}</p> : null}
             <button className="btn Primary" onClick={Submit}> Add</button>
         </div>
     )
